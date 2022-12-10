@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualization</title>
+</head>
+<body>
+    <form>
+        <h2>{{ title }}</h2>
+
+        <h2> Here is the graph: </h2>
+            <h2>{{ plot | safe }}</h2>
+    </form>
+
+    <form action = "/prediction", method = "post">
+        <p> <input type="submit" value="make a prediction">  </p>
+    </form>
+
+    <form action = "/action/re-pick", method = "get">
+        <p> Or, you may re-pick another attribute to see the relationship</p>
+        <p> <input type="submit" value="I do wanna re-pick another attribute">  </p>
+    </form>
+</body>
+</html>

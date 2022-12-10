@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction</title>
+</head>
+<body>
+    <form>
+        <p> Here is the equation: {{ helloworld }} </p>
+
+        <p> {{ plot | safe }} </p>
+    </form>
+
+    <form action="/action/calculate", method = "post">
+        <p>
+            <input type="float" name="value" placeholder="the number you want">
+            <input type="submit" value="calculate"> {{ errormessage }}
+        </p>
+    </form>
+
+    <form action="/action/return-to-homepage", method = "get">
+        <p>Do you wanna go back to the home page?</p>
+        <p> <input type="submit" value="Yes">  </p>
+    </form>
+</body>
+</html>
